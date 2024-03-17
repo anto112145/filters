@@ -26,11 +26,7 @@ function showresult(result){
     nosey = result[0].pose.nose.y;
 }
 function preload(){
-    crown = loadImage("crown.png");
     mustache = loadImage("mustache.png");
-    cigarate = loadImage("smoke.png");
-    glasses = loadImage("glass.png");
-    chain = loadImage("chain.png");
 }
 /*if(uc == "Crown"){
         image(crown,nosex-160,nosey-350,200,200);
