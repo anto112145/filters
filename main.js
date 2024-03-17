@@ -25,9 +25,6 @@ function draw(){
     if(uc == "Crown"){
         image(crown,nosex-160,nosey-350,200,200);
     }
-    if(uc == "Thug life"){
-        image(chain,nosex-100,nosey+25,90,50);
-    }
 }
 function takePic(){
     save("filter.png")
@@ -40,7 +37,7 @@ function showresult(result){
 function preload(){
     crown = loadImage("crown.png");
     mustache = loadImage("mustache.png");
-    cigarate = loadImage("smoke.png");
-    glasses = loadImage("glass.png");
-    chain = loadImage("chain.png");
+}
+function next(){
+    window.location = "filter.html";
 }
