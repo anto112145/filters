@@ -13,9 +13,21 @@ function modelloaded(){
 }
 function draw(){
     image(video,0,0,500,350);
-    image(mustache,nosex-100,nosey-85,90,25);
-    
-    
+    uc = document.getElementById("dropdown").value;
+    if(uc =="Clown nose"){
+        fill("red");
+        stroke("red");
+        circle(nosex-65,nosey-95,40);
+    }
+    if(uc == "Mustache"){
+        image(mustache,nosex-100,nosey-85,90,25);
+    }
+    if(uc == "Crown"){
+        image(crown,nosex-160,nosey-350,200,200);
+    }
+    if(uc == "Thug life"){
+        image(chain,nosex-100,nosey+25,90,50);
+    }
 }
 function takePic(){
     save("filter.png")
@@ -26,21 +38,9 @@ function showresult(result){
     nosey = result[0].pose.nose.y;
 }
 function preload(){
+    crown = loadImage("crown.png");
     mustache = loadImage("mustache.png");
+    cigarate = loadImage("smoke.png");
+    glasses = loadImage("glass.png");
+    chain = loadImage("chain.png");
 }
-/*if(uc == "Crown"){
-        image(crown,nosex-160,nosey-350,200,200);
-    }
-    if(uc == "Thug life"){
-        image(chain,nosex-100,nosey+25,90,50);
-    }
-    if(uc == "Crown"){
-        image(crown,nosex-160,nosey-350,200,200);
-    }
-    if(uc == "Thug life"){
-        image(chain,nosex-100,nosey+25,90,50);
-    }
-    if(uc == "Mustache"){
-        image(mustache,nosex-100,nosey-85,90,25);
-    }
-*/
